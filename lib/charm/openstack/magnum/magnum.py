@@ -85,6 +85,9 @@ class MagnumCharm(charms_openstack.charm.HAOpenStackCharm):
     package_codenames = {
         'magnum-common': collections.OrderedDict([
             ('6', 'queens'),
+            ('7', 'rocky'),
+            ('8', 'stein'),
+            ('9', 'train'),
         ]),
     }
 
