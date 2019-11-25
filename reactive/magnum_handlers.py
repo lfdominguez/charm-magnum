@@ -22,7 +22,6 @@ charm.use_defaults(
 @reactive.when('shared-db.available')
 @reactive.when('identity-service.available')
 @reactive.when('amqp.available')
-@reactive.when('trustee-credentials.available')
 def render_stuff(*args):
     hookenv.log("about to call the render_configs with {}".format(args))
     with charm.provide_charm_instance() as magnum_charm:
@@ -30,15 +29,6 @@ def render_stuff(*args):
             charm.optional_interfaces(args))
         magnum_charm.assess_status()
     reactive.set_state('config.complete')
-
-
-@reactive.when('trustee-credentials.connected')
-def request_domain(interface):
-    hookenv.log("requesting trustee domain credentials")
-    config = hookenv.config()
-    domain = config.get("trustee-domain", "magnum")
-    domain_admin = config.get("trustee-admin", "magnum_domain_admin")
-    interface.request_domain(domain, domain_admin)
 
 
 @reactive.when('identity-service.connected')
