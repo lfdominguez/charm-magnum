@@ -23,5 +23,4 @@ requires:
     interface: rabbitmq
   identity-service:
     interface: keystone
-  trustee-credentials:
-    interface: trustee
+    
