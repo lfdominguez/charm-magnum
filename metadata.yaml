@@ -1,6 +1,6 @@
 name: charm-magnum
 summary: Openstack container component
-maintainer: Gabriel Adrian Samfira <gsamfira@cloudbasesolutions.com>
+maintainer: Luis Felipe Domínguez Vega <ldominguezvega@gmail.com>
 description: |
   Magnum is an OpenStack API service developed by the OpenStack Containers Team making
   container orchestration engines such as Docker Swarm, Kubernetes, and Apache Mesos
@@ -9,11 +9,8 @@ description: |
   machines or bare metal in a cluster configuration. Click below for a ~2 minute demo
   of how the Magnum CLI works.
 tags:
-  # Replace "misc" with one or more whitelisted tags from this list:
-  # https://jujucharms.com/docs/stable/authors-charm-metadata
   - openstack
 series:
-  - xenial
   - bionic
 subordinate: false
 requires:
