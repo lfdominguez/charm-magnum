@@ -70,7 +70,7 @@ class MagnumCharm(charms_openstack.charm.HAOpenStackCharm):
     sync_cmd = ['magnum-db-manage', 'upgrade']
 
     required_relations = [
-        'shared-db', 'amqp', 'identity-service', 'trustee-credentials']
+        'shared-db', 'amqp', 'identity-service']
 
     restart_map = {
         MAGNUM_CONF: services,
