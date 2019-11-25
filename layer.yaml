@@ -3,8 +3,7 @@ includes:
   - interface:mysql-shared
   - interface:rabbitmq
   - interface:keystone
-  - interface:trustee
-repo: https://github.com/cloudbase/charm-magnum
+repo: https://github.com/lfdominguez/charm-magnum
 options:
   basic:
     use_venv: true
